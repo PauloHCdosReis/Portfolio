@@ -3,7 +3,7 @@ import { createContext, ReactNode, useState } from 'react'
 
 export type sidebarContextProps = {
   isOpen: boolean
-  toggleIsOpen: () => void
+  toggleIsOpen: (value?: boolean) => void
 }
 
 export const SidebarContext = createContext({} as sidebarContextProps)
@@ -15,8 +15,8 @@ type SidebarProviderType = {
 export function SidebarProvider({ children }: SidebarProviderType) {
   const [isOpen, setIsOpen] = useState(false)
 
-  const toggleIsOpen = () => {
-    setIsOpen((prevState) => !prevState)
+  const toggleIsOpen = (value?: boolean) => {
+    setIsOpen((prevState) => value ?? !prevState)
   }
 
   return (

@@ -5,7 +5,7 @@ import { useState } from 'react'
 export const SidebarTheme = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const toggleMenu = () => setIsOpen(!isOpen)
+  const toggleMenu = (value: boolean) => setIsOpen(value)
 
   return (
     <div className="relative flex justify-center items-center">
@@ -13,16 +13,18 @@ export const SidebarTheme = () => {
       <Button.ROOT
         variantSize="icon"
         variantType="ghost"
-        onClick={toggleMenu}
+        onClick={() => toggleMenu(true)}
+        onBlur={() => toggleMenu(false)}
         aria-expanded={isOpen}
         aria-haspopup="true"
+        className="focus-visible:ring-1"
       >
         <Button.ICON name="SunMoon" />
       </Button.ROOT>
 
       {/* Drop Menu */}
       {isOpen && (
-        <div className="absolute left-12 bottom-0 mb-2 bg-white shadow-lg rounded-md z-30 p-2 w-40">
+        <div className="absolute left-11 -bottom-2 mb-2 dark:bg-neutral-900 shadow-sm shadow-purple-950 rounded-md z-30 p-2 w-40">
           <ul className="flex flex-col">
             <li>
               <button
