@@ -1,5 +1,4 @@
 'use client'
-import { useTheme } from 'next-themes'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
@@ -18,9 +17,9 @@ import {
 import Icon from '../icon'
 import { useSiderBar } from '@/hooks'
 import { useState } from 'react'
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 
-export const SidebarTheme = () => {
-  const { setTheme } = useTheme()
+export const SidebarUser = () => {
   const [openDrop, setOpenDrop] = useState(false)
   const { isOpen } = useSiderBar()
 
@@ -32,7 +31,13 @@ export const SidebarTheme = () => {
             <DropdownMenuTrigger asChild>
               <TooltipTrigger asChild>
                 <Button variant="ghost" size="icon" className="w-9 h-9">
-                  <Icon name="SunMoon" />
+                  <Avatar className="h-9 w-9 rounded-lg">
+                    <AvatarImage
+                      alt="Foto de Perfil"
+                      src="https://lh3.googleusercontent.com/pw/AP1GczNFc5BK7Qc5uzBolXDi9Fd5pVVf4jvD10qd7nuYgZFP7IwHLlfgSG_88zvv7jzDHObIs7nnRI-V5z5x2hnoXPGmyzafpidHRsVBYPd0RhKhi3HIKgIno7WETkvX98EnqsgPtnMEoSVSM4Xo-Jrl4FOL=w400-h400-s-no-gm?authuser=0"
+                    />
+                    <AvatarFallback className="rounded-lg">PR</AvatarFallback>
+                  </Avatar>
                 </Button>
               </TooltipTrigger>
             </DropdownMenuTrigger>
@@ -42,39 +47,30 @@ export const SidebarTheme = () => {
               hidden={openDrop || isOpen}
               className="px-3 py-2 rounded shadow-lg text-sm"
             >
-              <p className="font-univia-ultra">Alterar Tema</p>
+              <p className="font-univia-ultra">Paulo Reis</p>
             </TooltipContent>
           </Tooltip>
           <DropdownMenuContent
             sideOffset={8}
             alignOffset={-2}
             side="left"
-            align="end"
+            align="start"
           >
             <DropdownMenuLabel className="text-center font-univia-ultra">
-              Alterar Tema
+              Paulo Reis
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem
-              className="font-univia-regular cursor-pointer"
-              onClick={() => setTheme('light')}
-            >
-              <Icon name="Sun" />
-              Tema Claro
+            <DropdownMenuItem className="font-univia-regular cursor-pointer">
+              <Icon name="Github" />
+              GitHub
             </DropdownMenuItem>
-            <DropdownMenuItem
-              className="font-univia-regular cursor-pointer"
-              onClick={() => setTheme('dark')}
-            >
-              <Icon name="Moon" />
-              Tema Escuro
+            <DropdownMenuItem className="font-univia-regular cursor-pointer">
+              <Icon name="Linkedin" />
+              Linkedin
             </DropdownMenuItem>
-            <DropdownMenuItem
-              className="font-univia-regular cursor-pointer"
-              onClick={() => setTheme('system')}
-            >
-              <Icon name="SunMoon" />
-              Tema do Sistema
+            <DropdownMenuItem className="font-univia-regular cursor-pointer">
+              <Icon name="Mail" />
+              E-mail
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

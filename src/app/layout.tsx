@@ -4,6 +4,7 @@ import './globals.css'
 import MainProvider from '@/providers'
 import { SidebarProvider } from '@/providers/sidebarProvider'
 import { Sidebar } from '@/components/sidebar'
+import { SidebarContent } from '@/components/sidebar/sidebar-content'
 
 const UniviaProUltra = localFont({
   src: './fonts/UniviaPro-Ultra.ttf',
@@ -43,12 +44,12 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`min-h-svh h-svh max-h-svh min-w-full w-full max-w-full overflow-hidden text-neutral-900 dark:text-neutral-100 bg-neutral-50 dark:bg-neutral-950 ${UniviaProUltra.variable} ${UniviaProRegular.variable} ${UniviaProBold.variable} antialiased`}
+        className={`min-h-svh h-svh max-h-svh min-w-full w-full max-w-full overflow-hidden ${UniviaProUltra.variable} ${UniviaProRegular.variable} ${UniviaProBold.variable} antialiased`}
       >
         <MainProvider>
           <SidebarProvider>
             <Sidebar />
-            {children}
+            <SidebarContent>{children}</SidebarContent>
           </SidebarProvider>
         </MainProvider>
       </body>

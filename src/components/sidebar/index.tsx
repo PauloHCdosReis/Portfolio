@@ -1,10 +1,12 @@
+import { SidebarNav } from './sidebar-nav'
 import { SidebarTheme } from './sidebar-theme'
+import { SidebarUser } from './sidebar-user'
 
 export const Sidebar = () => {
   return (
-    <nav className="flex flex-col justify-between items-center py-3 w-12 max-w-12 border-r border-purple-400 dark:border-purple-700">
-      <div>H</div>
-      <div>N</div>
+    <nav className="flex flex-col justify-between items-center py-3 min-w-12 w-1min-w-12 max-w-1min-w-12 border-r border-primary">
+      <SidebarUser />
+      <SidebarNav />
       <SidebarTheme />
     </nav>
   )

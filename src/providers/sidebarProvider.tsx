@@ -1,5 +1,6 @@
 'use client'
-import { createContext, ReactNode, useState } from 'react'
+import { ReactNode, useState } from 'react'
+import { createContext } from 'use-context-selector'
 
 export type sidebarContextProps = {
   isOpen: boolean
