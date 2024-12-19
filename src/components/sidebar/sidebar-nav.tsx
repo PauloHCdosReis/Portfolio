@@ -40,7 +40,11 @@ export const SidebarNav = () => {
       image: isDark
         ? 'https://lh3.googleusercontent.com/pw/AP1GczPWdSDaSr2tYYnWz46difPls2288VqR5CjGXUr_2xWR5rXUmmVBvuVllv181eU2_VpYAxzhMvDNQsaVZ3l53ekb6PNbiwg2EXsMIioZ7Uk7pBDOYLR7_05tB8lxdzgcu-Ihikbbhgq8Pb43nS82XW4V=w164-h148-s-no-gm?authuser=0'
         : 'https://lh3.googleusercontent.com/pw/AP1GczPv0xWGfsPrjacxsv1aS-Zu87rId2_CgyHglhhwjHIkyrdXBXM26OxFPuoFzxjm-v_vPdnrRTIYYq8RK6KiBHxPduKF4vtyFyVM1LxPitH0MKSVKnypPkps5KrxLy_XNmMsrcEEEZ56S9ceEzqr3-J7=w225-h225-s-no-gm?authuser=0',
-      items: [],
+      items: [
+        {
+          title: 'React',
+        },
+      ],
     },
   ]
 
