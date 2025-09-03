@@ -1,3 +1,4 @@
+"use client";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -26,12 +27,12 @@ const MenuMobile = () => {
         {links.map((link) => (
           <DropdownMenuItem
             key={`menu-mobile-${link.route}`}
-            className="py-1 cursor-pointer text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 hover:dark:text-neutral-100"
+            className="py-1 cursor-pointer"
             asChild
           >
             <Link href={link.route}>
               <div
-                className="bg-background flex size-7 items-center justify-center rounded-md border"
+                className="flex size-7 items-center justify-center rounded-md border"
                 aria-hidden="true"
               >
                 <Icon name={link.icon} size={10} className="opacity-60" />

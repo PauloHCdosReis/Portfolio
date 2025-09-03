@@ -5,11 +5,6 @@ export const themes = [
     btn: "bg-blue-100 dark:bg-blue-800/50 border-2 border-blue-800",
   },
   {
-    name: "default",
-    span: "bg-gray-500 border-gray-800",
-    btn: "bg-gray-100 dark:bg-gray-800/50 border-2 border-gray-800",
-  },
-  {
     name: "green",
     span: "bg-green-500 border-green-800",
     btn: "bg-green-100 dark:bg-green-800/50 border-2 border-green-800",

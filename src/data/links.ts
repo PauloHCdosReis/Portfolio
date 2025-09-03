@@ -2,7 +2,7 @@ import { linksType } from "@ts/links";
 
 export const links: linksType[] = [
   {
-    route: "#",
+    route: "#Home",
     label: "Home",
     icon: "House",
   },
@@ -19,7 +19,7 @@ export const links: linksType[] = [
   {
     route: "#Certificados",
     label: "Certificados",
-    icon: "User",
+    icon: "Award",
   },
   {
     route: "#Contato",

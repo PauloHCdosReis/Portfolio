@@ -11,7 +11,7 @@ const MenuDesktop = () => {
           variant={"ghost"}
           size={"sm"}
           key={`menu-desktop-${link.route}`}
-          className="text-neutral-600 dark:text-neutral-400"
+          className="text-muted-foreground"
           asChild
         >
           <Link href={link.route}>

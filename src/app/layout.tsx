@@ -39,12 +39,9 @@ export default async function RootLayout({
   return (
     <html lang="pt" data-theme={theme} suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${poppins.variable} ${geistMono.variable} antialiased min-h-dvh scroll-smooth overflow-y-auto`}
+        className={`${inter.variable} ${poppins.variable} ${geistMono.variable} antialiased`}
       >
-        <MainProvider>
-          <Header />
-          {children}
-        </MainProvider>
+        <MainProvider>{children}</MainProvider>
       </body>
     </html>
   );

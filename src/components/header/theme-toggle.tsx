@@ -30,7 +30,11 @@ export function ThemeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon" className="cursor-pointer">
+        <Button
+          variant="outline"
+          size="icon"
+          className="cursor-pointer ring-1 ring-primary/50 shadow-lg/50 shadow-primary"
+        >
           <Icon name="Palette" className="h-[1.2rem] w-[1.2rem]" />
         </Button>
       </DropdownMenuTrigger>
