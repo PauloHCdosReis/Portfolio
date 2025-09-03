@@ -52,6 +52,28 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+:root {
+  --background: oklch(1.0000 0.0001 263.2831);
+  --foreground: oklch(0.1284 0.0267 261.5994);
+  --card: oklch(1.0000 0.0001 263.2831);
+  --card-foreground: oklch(0.1284 0.0267 261.5994);
+  --popover: oklch(1.0000 0.0001 263.2831);
+  --popover-foreground: oklch(0.1284 0.0267 261.5994);
+  --muted: oklch(0.9679 0.0028 264.5088);
+  --muted-foreground: oklch(0.5503 0.0235 264.3640);
+}
+
+.dark {
+  --background: oklch(0.1284 0.0267 261.5994);
+  --foreground: oklch(0.9838 0.0036 248.2271);
+  --card: oklch(0.1510 0.0330 265.3778);
+  --card-foreground: oklch(0.9838 0.0036 248.2271);
+  --popover: oklch(0.1510 0.0330 265.3778);
+  --popover-foreground: oklch(0.9838 0.0036 248.2271);
+  --muted: oklch(0.2794 0.0299 256.8582);
+  --muted-foreground: oklch(0.7148 0.0196 259.9580);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

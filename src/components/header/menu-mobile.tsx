@@ -26,7 +26,7 @@ const MenuMobile = () => {
         {links.map((link) => (
           <DropdownMenuItem
             key={`menu-mobile-${link.route}`}
-            className="py-1 cursor-pointer"
+            className="py-1 cursor-pointer text-neutral-600 dark:text-neutral-400 hover:text-neutral-800 hover:dark:text-neutral-100"
             asChild
           >
             <Link href={link.route}>
