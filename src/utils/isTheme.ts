@@ -1,6 +1,6 @@
-import { themes } from "@/data";
-import { ThemeType } from "@/types";
+import { themes } from "@data/index";
+import { ThemeType } from "@ts/index";
 
 export function isTheme(value: string): value is ThemeType {
-  return (themes as readonly string[]).includes(value);
+  return themes.some((theme) => theme.name === value);
 }

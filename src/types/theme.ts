@@ -1,3 +1,3 @@
-import { themes } from "@/data";
+import { themes } from "@data/index";
 
-export type ThemeType = (typeof themes)[number];
+export type ThemeType = (typeof themes)[number]["name"];

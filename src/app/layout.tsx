@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Inter, Poppins } from "next/font/google";
-import "../styles/globals.css";
-import MainProvider from "@/providers";
-import { cookies } from "next/headers";
-import { themes } from "@/data";
-import { ThemeType } from "@/types";
-import { isTheme } from "@/utils";
+import "@styles/globals.css";
+import MainProvider from "@providers/index";
+import { Header } from "@components/header";
+import { getCurrentTheme } from "@actions/index";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -36,18 +34,17 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookieStore = await cookies();
-
-  const savedTheme = cookieStore.get("theme")?.value;
-  const initialTheme: ThemeType =
-    savedTheme && isTheme(savedTheme) ? savedTheme : "blue";
+  const theme = await getCurrentTheme();
 
   return (
-    <html lang="pt" data-theme={initialTheme} suppressHydrationWarning>
+    <html lang="pt" data-theme={theme} suppressHydrationWarning>
       <body
         className={`${inter.variable} ${poppins.variable} ${geistMono.variable} antialiased min-h-dvh scroll-smooth overflow-y-auto`}
       >
-        <MainProvider>{children}</MainProvider>
+        <MainProvider>
+          <Header />
+          {children}
+        </MainProvider>
       </body>
     </html>
   );
