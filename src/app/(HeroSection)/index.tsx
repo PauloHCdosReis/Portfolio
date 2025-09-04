@@ -1,5 +1,5 @@
 import Icon from "@components/icon";
-import { contato, informacoes } from "@data/informações";
+import { contato, informacoes } from "@data/index";
 import { Button } from "@components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";

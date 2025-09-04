@@ -1,4 +1,4 @@
 export * from "./themes";
-export * from "./informações";
+export * from "./informacoes";
 export * from "./links";
-export * from "./experiencia";
+export * from "./experiencias";

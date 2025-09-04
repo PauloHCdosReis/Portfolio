@@ -1,11 +1,12 @@
 import { experienciaType } from "@ts/index";
 import EatonLogo from "@public/logos/eatonlogo.png";
+import SoftrackLogo from "@public/logos/softracklogo.png";
 
 export const experiencias: experienciaType[] = [
   {
-    empresa: "Softrack",
+    empresa: "Softrack | Inteligência em cada movimento",
     iniciais: "SF",
-    logo: EatonLogo,
+    logo: SoftrackLogo,
     localizacao: "Campinas, São Paulo, Brasil",
     competencias: [
       "React",
@@ -31,7 +32,7 @@ export const experiencias: experienciaType[] = [
   {
     empresa: "Agrosoftware Sistema e Soluções Agropecuária LTDA ( Softrack )",
     iniciais: "AG",
-    logo: EatonLogo,
+    logo: SoftrackLogo,
     localizacao: "Campinas, São Paulo, Brasil",
     competencias: [
       "Angular",
