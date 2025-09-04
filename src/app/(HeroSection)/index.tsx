@@ -13,20 +13,20 @@ export const HeroSection = () => {
   return (
     <section
       id="Home"
-      className="min-h-[calc(100svh-3.25rem)] scroll-mt-20 p-2 py-4 md:py-2 bg-linear-to-br from-primary/80 to-primary dark:from-primary dark:to-primary/60 flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen-minus-header scroll-mt-20 p-2 py-4 md:py-2 bg-linear-to-br from-gradient-from to-gradient-to flex items-center justify-center relative overflow-hidden"
     >
       <div className="flex flex-col gap-2 md:gap-4 justify-center items-center px-4 text-center relative">
         <div className="flex flex-col justify-center items-center gap-2 md:gap-4">
-          <Avatar className="w-50 h-50 mx-auto border-border border-2">
+          <Avatar className="w-50 h-50 mx-auto ring-4 ring-background">
             <AvatarImage src={informacoes.foto} />
             <AvatarFallback>{informacoes.iniciais}</AvatarFallback>
           </Avatar>
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-primary-foreground dark:text-foreground animate-fade-in">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-background dark:text-foreground animate-fade-in">
             {informacoes.nome}
           </h1>
-          <p className="text-xl md:text-2xl mb-2 text-primary-foreground dark:text-foreground">
+          <h2 className="text-xl md:text-2xl mb-2 text-background dark:text-foreground">
             {informacoes.cargo}
-          </p>
+          </h2>
         </div>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 md:gap-4 mb-8">
           <Button
@@ -60,7 +60,7 @@ export const HeroSection = () => {
           <Button
             size={"icon"}
             variant={"ghost"}
-            className="text-primary-foreground dark:text-foreground"
+            className="text-background dark:text-foreground"
             asChild
           >
             <Link
@@ -74,7 +74,7 @@ export const HeroSection = () => {
           <Button
             size={"icon"}
             variant={"ghost"}
-            className="text-primary-foreground dark:text-foreground"
+            className="text-background dark:text-foreground"
             asChild
           >
             <Link

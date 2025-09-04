@@ -1,4 +1,5 @@
 "use client";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,9 +25,9 @@ const MenuMobile = () => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start">
-        {links.map((link) => (
+        {links.map((link, index) => (
           <DropdownMenuItem
-            key={`menu-mobile-${link.route}`}
+            key={`menu-mobile-${link.route}-index`}
             className="py-1 cursor-pointer"
             asChild
           >

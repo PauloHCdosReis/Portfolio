@@ -39,7 +39,7 @@ export default async function RootLayout({
   return (
     <html lang="pt" data-theme={theme} suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${poppins.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${poppins.variable} ${geistMono.variable} scroll-smooth overflow-y-auto antialiased`}
       >
         <MainProvider>{children}</MainProvider>
       </body>

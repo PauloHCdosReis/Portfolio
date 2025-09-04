@@ -31,6 +31,8 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.213 47.604);
+  --gradient-from: oklch(75% 0.18 70);
+  --gradient-to:   oklch(60% 0.20 70);
 }
 
 [data-theme='orange'].dark {
@@ -65,4 +67,6 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.646 0.222 41.116);
+  --gradient-from:  oklch(65% 0.18 70);
+  --gradient-to:    oklch(50% 0.20 70);
 }

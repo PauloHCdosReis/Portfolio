@@ -30,27 +30,23 @@ export const contato = {
 export const habilidades: habilidateType[] = [
   {
     icon: "Code",
-    title: "Desenvolvimento",
-    description:
+    titulo: "Desenvolvimento",
+    descricao:
       "Especializado em React, React Native, Kotlin, Next e tecnologias modernas",
   },
   {
     icon: "Palette",
-    title: "Design",
-    description: "Interface intuitiva e experiência do usuário excepcional",
+    titulo: "Design",
+    descricao: "Interface intuitiva e experiência do usuário excepcional",
   },
   {
     icon: "Zap",
-    title: "Performance",
-    description: "Aplicações rápidas e otimizadas para todos os dispositivos",
+    titulo: "Performance",
+    descricao: "Aplicações rápidas e otimizadas para todos os dispositivos",
   },
   {
     icon: "Heart",
-    title: "Paixão",
-    description: "Dedicado em criar soluções que fazem a diferença",
+    titulo: "Paixão",
+    descricao: "Dedicado em criar soluções que fazem a diferença",
   },
 ];
-
-export const certificados = [];
-
-export const experiencias = [];
