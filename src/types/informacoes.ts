@@ -22,3 +22,15 @@ export type experienciaType = {
   competencias: string[];
   cargos: cargoType[];
 };
+
+export type certificadoType = {
+  titulo: string;
+  emissora: string;
+  iniciais: string;
+  dataEntrada: string;
+  dataSaida: string;
+  imagem: StaticImageData;
+  url: string;
+  credentialId?: string;
+  habilidades: string[];
+};

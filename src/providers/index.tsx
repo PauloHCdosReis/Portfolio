@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 import { ThemeProvider } from "./theme-provider";
+import { Toaster } from "@components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const MainProvider = ({ children }: { children: ReactNode }) => {
   return (
@@ -9,7 +11,10 @@ const MainProvider = ({ children }: { children: ReactNode }) => {
       enableSystem
       disableTransitionOnChange
     >
-      {children}
+      <TooltipProvider>
+        {children}
+        <Toaster position="top-right" richColors visibleToasts={5} />
+      </TooltipProvider>
     </ThemeProvider>
   );
 };
