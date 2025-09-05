@@ -26,7 +26,7 @@ export const CertificatesSection = () => {
           {certificados.map((cert, index) => (
             <Card
               key={index}
-              className="py-0 gap-4 overflow-hidden transition-all duration-300 group ring-2 ring-border"
+              className="py-0 gap-4 overflow-hidden transition-all duration-300 group ring-2 ring-border bg-gradient-to-br from-section-bg to-muted hover:scale-101 hover:ring-primary/50 hover:shadow-lg/70 hover:shadow-primary"
             >
               <Avatar className="aspect-video w-full h-60 rounded-none flex items-center justify-center">
                 <AvatarImage src={cert.imagem.src} alt={cert.iniciais} />

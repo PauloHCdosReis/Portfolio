@@ -1,6 +1,7 @@
 import { habilidades, informacoes } from "@data/index";
 import { Card, CardContent } from "@components/ui/card";
 import Icon from "@components/icon";
+import { Title } from "@components/title";
 
 export function AboutSection() {
   return (
@@ -9,13 +10,14 @@ export function AboutSection() {
       className="min-h-screen-minus-header scroll-mt-10 p-2 py-12 md:py-2 flex flex-col justify-center items-center bg-background relative overflow-hidden"
     >
       <div className="flex flex-col gap-8 lg:gap-12 justify-center items-center px-4">
-        <div className="text-center flex flex-col justify-center items-center gap-4">
+        <Title title="Sobre Mim" subTitle={informacoes.sobreMim} />
+        {/* <div className="text-center flex flex-col justify-center items-center gap-4">
           <h2 className="text-4xl md:text-5xl font-bold ">Sobre Mim</h2>
           <div className="w-24 h-1 bg-primary mx-auto" />
           <p className="text-lg text-muted-foreground max-w-4xl leading-relaxed">
             {informacoes.sobreMim}
           </p>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {habilidades.map((habilidade, index) => {
