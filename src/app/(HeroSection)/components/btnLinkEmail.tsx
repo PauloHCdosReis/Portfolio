@@ -34,7 +34,7 @@ export const BtnLinkEmail = ({ className }: { className?: string }) => {
 
       setCopied("copied");
       toast.success("Sucesso ao copiar e-mail");
-    } catch (err) {
+    } catch {
       setCopied("error");
       toast.error("Erro ao copiar e-mail");
     } finally {

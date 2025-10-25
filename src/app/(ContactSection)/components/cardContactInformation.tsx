@@ -1,6 +1,5 @@
 import { contato } from "@data/index";
 import { CardItemContactInformation } from "./cardItemContactInformation";
-import { BtnLinkEmail } from "@/app/(HeroSection)/components";
 
 export const CardContactInformation = () => {
   return (

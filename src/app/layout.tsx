@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist_Mono, Inter, Poppins } from "next/font/google";
 import "@styles/globals.css";
 import MainProvider from "@providers/index";
-import { Header } from "@components/header";
 import { getCurrentTheme } from "@actions/index";
 
 const inter = Inter({
