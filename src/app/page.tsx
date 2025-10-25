@@ -3,6 +3,7 @@ import { AboutSection } from "./(AboutSection)";
 import { HeroSection } from "./(HeroSection)";
 import { ExperienceSection } from "./(ExperienceSection)";
 import { CertificatesSection } from "./(CertificatesSection)";
+import { ContactSection } from "./(ContactSection)";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <AboutSection />
       <ExperienceSection />
       <CertificatesSection />
+      <ContactSection />
     </div>
   );
 }

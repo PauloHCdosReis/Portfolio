@@ -1,10 +1,5 @@
 import { contato, informacoes } from "@data/index";
-import {
-  BtnDownloadCv,
-  BtnFavoriteLink,
-  BtnLinkEmail,
-  Perfil,
-} from "./components";
+import { BtnLinkCv, BtnFavoriteLink, BtnLinkEmail, Perfil } from "./components";
 
 export const HeroSection = () => {
   return (
@@ -15,24 +10,24 @@ export const HeroSection = () => {
       <div className="flex flex-col gap-2 md:gap-4 justify-center items-center px-4 text-center relative">
         <Perfil />
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 md:gap-4 mb-8">
-          <BtnDownloadCv />
+          <BtnLinkCv />
           <BtnLinkEmail />
         </div>
         <div className="flex items-center justify-center gap-6">
           <BtnFavoriteLink
-            href={contato.github}
-            message="Github"
-            icon="Github"
+            href={contato.github.url}
+            message={contato.github.titulo}
+            icon={contato.github.icon}
           />
           <BtnFavoriteLink
-            href={contato.linkedin}
-            message="Linkedin"
-            icon="Linkedin"
+            href={contato.linkedin.url}
+            message={contato.linkedin.titulo}
+            icon={contato.linkedin.icon}
           />
           <BtnFavoriteLink
-            href={contato.whatsapp}
-            message="Whatsapp"
-            icon="Phone"
+            href={contato.whatsapp.url}
+            message={contato.whatsapp.titulo}
+            icon={contato.whatsapp.icon}
           />
         </div>
       </div>

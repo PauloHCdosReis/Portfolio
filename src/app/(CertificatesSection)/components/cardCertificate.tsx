@@ -1,0 +1,77 @@
+import { Badge } from "@components/ui/badge";
+import Icon from "@components/icon";
+import { Avatar, AvatarFallback, AvatarImage } from "@components/ui/avatar";
+import { Card, CardFooter } from "@components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { BtnCopyCredentialId } from "./btnCopy";
+import { certificadoType } from "@ts/index";
+
+export const CardCertificate = ({ cert }: { cert: certificadoType }) => {
+  return (
+    <Card className="py-0 gap-4 overflow-hidden transition-all duration-300 group ring-2 ring-border bg-gradient-to-br from-section-bg to-muted hover:scale-101 hover:ring-primary/50 hover:shadow-lg/70 hover:shadow-primary">
+      <Avatar className="aspect-video w-full h-60 rounded-none flex items-center justify-center">
+        <AvatarImage src={cert.imagem.src} alt={cert.iniciais} />
+        <AvatarFallback className="rounded-none text-lg">
+          {cert.iniciais}
+        </AvatarFallback>
+        <Button
+          variant="ghost"
+          className="absolute cursor-pointer inset-0 h-full flex items-center rounded-none justify-center p-0 bg-black/40 text-white hover:bg-bg-black/40 hover:text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          asChild
+        >
+          <Link href={cert.url} target="_blank" rel="noopener noreferrer">
+            <Icon name="ExternalLink" className="size-8 flex-shrink-0" />
+          </Link>
+        </Button>
+      </Avatar>
+
+      <div className="p-6">
+        <div className="flex items-start justify-between mb-3">
+          <div className="flex items-center">
+            <Icon
+              name="Award"
+              className="w-5 h-5 text-primary mr-2 flex-shrink-0"
+            />
+            <h3 className="font-bold text-lg leading-tight">{cert.titulo}</h3>
+          </div>
+        </div>
+
+        <p className="text-muted-foreground mb-3">{cert.emissora}</p>
+
+        <div className="flex items-center text-sm text-muted-foreground mb-4">
+          <Icon name="Calendar" className="w-4 h-4 mr-2" />
+          Verificação emitida em {cert.emitido}
+        </div>
+
+        <div className="flex flex-wrap gap-1 mb-4">
+          {cert.habilidades.map((hab, index) => (
+            <Badge
+              key={`certificados-habilidades-${hab}-${index}`}
+              variant="secondary"
+              className="text-xs bg-primary/10 text-primary"
+            >
+              {hab}
+            </Badge>
+          ))}
+        </div>
+
+        {cert.credentialId && (
+          <div className="flex flex-row justify-start gap-2 items-center">
+            <BtnCopyCredentialId credentialId={cert.credentialId} />
+            <span className="text-xs text-muted-foreground">
+              ID: {cert.credentialId}
+            </span>
+          </div>
+        )}
+      </div>
+      <CardFooter className="flex md:hidden pt-0 -mt-4 mb-2">
+        <Button variant={"outline"} className="w-full" asChild>
+          <Link href={cert.url} target="_blank" rel="noopener noreferrer">
+            <Icon name="ExternalLink" />
+          </Link>
+        </Button>
+      </CardFooter>
+    </Card>
+  );
+};

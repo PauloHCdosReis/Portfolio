@@ -1,10 +1,12 @@
-import { habilidateType } from "@ts/index";
+import { contatosObjType, habilidadeType } from "@ts/index";
 
 export const informacoes = {
   foto: "https://github.com/PauloHCdosReis.png",
   iniciais: "PR",
   nome: "Paulo Henrique Couto dos Reis",
   sexo: "Homem cisgênero (heterossexual)",
+  cvUrl:
+    "https://drive.google.com/file/d/1i0T3WHB-xrGun_WpS6eRkRihgksfAYwj/view?usp=sharing",
   cargo: "Analista Desenvolvedor Junior",
   dataDeNascimento: "2003-03-05",
   sobreMim:
@@ -13,16 +15,40 @@ export const informacoes = {
   feitoEm: "2025",
 } as const;
 
-export const contato = {
-  telefone: "(19) 97128-6210",
-  email: "paulohcreis.contato@gmail.com",
-  instagram: "https://instagram.com/paulo_h_c_dos_reis_",
-  linkedin: "https://www.linkedin.com/in/paulo-henrique-couto-dos-reis",
-  github: "https://github.com/PauloHCdosReis",
-  whatsapp: "https://wa.me/5519971286210",
+export const contato: contatosObjType = {
+  email: {
+    icon: "Mail",
+    titulo: "Email",
+    valor: "paulohcreis.contato@gmail.com",
+    url: "paulohcreis.contato@gmail.com",
+  },
+  instagram: {
+    icon: "Instagram",
+    titulo: "Instagram",
+    valor: "@paulo_h_c_dos_reis_",
+    url: "https://instagram.com/paulo_h_c_dos_reis_",
+  },
+  linkedin: {
+    icon: "Linkedin",
+    titulo: "LinkedIn",
+    valor: "Paulo Henrique Couto dos Reis",
+    url: "https://www.linkedin.com/in/paulo-henrique-couto-dos-reis",
+  },
+  github: {
+    icon: "Github",
+    titulo: "GitHub",
+    valor: "PauloHCdosReis",
+    url: "https://github.com/PauloHCdosReis",
+  },
+  whatsapp: {
+    icon: "Phone",
+    titulo: "WhatsApp",
+    valor: "(19) 97128-6210",
+    url: "https://wa.me/5519971286210",
+  },
 };
 
-export const habilidades: habilidateType[] = [
+export const habilidades: habilidadeType[] = [
   {
     icon: "Code",
     titulo: "Desenvolvimento",

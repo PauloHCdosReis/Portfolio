@@ -1,1 +1,1 @@
-export * from "./btnCopy";
+export * from "./cardCertificate";
