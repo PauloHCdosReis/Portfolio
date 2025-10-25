@@ -27,7 +27,7 @@ const MenuMobile = () => {
       <DropdownMenuContent align="start">
         {links.map((link, index) => (
           <DropdownMenuItem
-            key={`menu-mobile-${link.route}-index`}
+            key={`menu-mobile-${link.route}-${index}`}
             className="py-1 cursor-pointer"
             asChild
           >

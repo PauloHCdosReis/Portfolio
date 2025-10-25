@@ -1,7 +1,5 @@
 import { Card } from "@components/ui/card";
-import { Button } from "@components/ui/button";
 import { BtnLinkEmail } from "@/app/(HeroSection)/components";
-import Icon from "@components/icon";
 import { BtnLinkWhats } from "./btnLinkWhats";
 
 export const CardCallToAction = () => {

@@ -1,4 +1,4 @@
-import { contato, informacoes } from "@data/index";
+import { contato } from "@data/index";
 import { BtnLinkCv, BtnFavoriteLink, BtnLinkEmail, Perfil } from "./components";
 
 export const HeroSection = () => {

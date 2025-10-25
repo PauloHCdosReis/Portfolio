@@ -35,7 +35,7 @@ export const BtnCopyCredentialId = ({
 
       setCopied("copied");
       toast.success("Sucesso ao copiar");
-    } catch (err) {
+    } catch {
       setCopied("error");
       toast.error("Erro ao copiar");
     } finally {
