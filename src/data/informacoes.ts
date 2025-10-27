@@ -4,7 +4,7 @@ export const informacoes = {
   foto: "https://github.com/PauloHCdosReis.png",
   iniciais: "PR",
   nome: "Paulo Henrique Couto dos Reis",
-  sexo: "Homem cisgênero (heterossexual)",
+  sexo: "Homem",
   cvUrl:
     "https://drive.google.com/file/d/1i0T3WHB-xrGun_WpS6eRkRihgksfAYwj/view?usp=sharing",
   cargo: "Analista Desenvolvedor Junior",
